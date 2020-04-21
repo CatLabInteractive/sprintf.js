@@ -217,15 +217,16 @@
     if (typeof window !== 'undefined') {
         window['sprintf'] = sprintf
         window['vsprintf'] = vsprintf
-
-        if (typeof define === 'function' && define['amd']) {
-            define(function() {
-                return {
-                    'sprintf': sprintf,
-                    'vsprintf': vsprintf
-                }
-            })
-        }
     }
+
+    if (typeof define === 'function' && define['amd']) {
+        define(function() {
+            return {
+                'sprintf': sprintf,
+                'vsprintf': vsprintf
+            }
+        })
+    }
+
     /* eslint-enable quote-props */
 }(); // eslint-disable-line
